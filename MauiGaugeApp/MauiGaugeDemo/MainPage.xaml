@@ -11,7 +11,6 @@
             VerticalOptions="Center">
 
             <mauiGauge:GaugeView
-                
                 GaugeType="Curved"
                 GaugeValue="{Binding DemoNumber}"
                 GaugeMinimum="10"
