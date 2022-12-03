@@ -81,14 +81,15 @@ public partial class GaugeView : ContentView
 	{
 		InitializeComponent();
         _graphicsView = this.graphicsView;
+        _graphicsView.WidthRequest = 220;
+        _graphicsView.HeightRequest = 150;
+        SetGaugeType(GaugeType);
         InnerInitialize();
     }
 
     private void InnerInitialize()
     {
-        _graphicsView.WidthRequest = 220;
-        _graphicsView.HeightRequest = 150;
-        SetGaugeType(GaugeType);
+        
         SetGaugeColor(GaugeColor);
         SetLabelColor(LabelColor);
         SetBackgroundColor(BackgroundColor);
@@ -101,6 +102,7 @@ public partial class GaugeView : ContentView
     {
         var gaugeView = bindable as GaugeView;
         gaugeView.SetGaugeType((GaugeTypes)newvalue);
+        gaugeView.InnerInitialize();
 
     }
 
@@ -110,6 +112,9 @@ public partial class GaugeView : ContentView
         {
             case GaugeTypes.Curved:
                 _graphicsView.Drawable = new CurvedGauge();
+                break;
+            case GaugeTypes.Horizontal:
+                _graphicsView.Drawable = new HorizontalGauge();
                 break;
             default:
                 throw new NotImplementedException($"No drawable is implemented for {newType}");
