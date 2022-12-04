@@ -21,7 +21,7 @@
             {
                 canvas.FontColor = LabelColor;
                 canvas.FontSize = 36;
-                canvas.DrawString(ConstrainedValue.ToString(), (10 + gaugeTotalLength) / 2, 50, HorizontalAlignment.Center);
+                canvas.DrawString(ConstrainedValue.ToString(), 10 + gaugeTotalLength / 2, 50, HorizontalAlignment.Center);
             }
         }
     }
