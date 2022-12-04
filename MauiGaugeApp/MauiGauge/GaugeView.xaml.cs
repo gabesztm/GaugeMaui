@@ -59,13 +59,13 @@ public partial class GaugeView : ContentView
         set { SetValue(LabelColorProperty, value); }
     }
 
-    public static readonly BindableProperty BackgroundColorProperty =
-       BindableProperty.Create(nameof(BackgroundColor), typeof(Color), typeof(Color), Colors.LightGrey, propertyChanged: OnBackgroundColorChanged);
+    public static readonly BindableProperty GaugeBackgroundColorProperty =
+       BindableProperty.Create(nameof(GaugeBackgroundColor), typeof(Color), typeof(Color), Colors.LightGrey, propertyChanged: OnBackgroundColorChanged);
 
-    public Color BackgroundColor
+    public Color GaugeBackgroundColor
     {
-        get { return (Color)GetValue(BackgroundColorProperty); }
-        set { SetValue(BackgroundColorProperty, value); }
+        get { return (Color)GetValue(GaugeBackgroundColorProperty); }
+        set { SetValue(GaugeBackgroundColorProperty, value); }
     }
 
     public static readonly BindableProperty IsLabelShownProperty =
@@ -92,7 +92,7 @@ public partial class GaugeView : ContentView
         
         SetGaugeColor(GaugeColor);
         SetLabelColor(LabelColor);
-        SetBackgroundColor(BackgroundColor);
+        SetBackgroundColor(GaugeBackgroundColor);
         SetLabelShown(IsLabelShown);
         SetGaugeDrawableMaximum(GaugeMaximum);
         SetGaugeDrawableMinimum(GaugeMinimum);
