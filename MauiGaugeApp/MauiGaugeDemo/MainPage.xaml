@@ -13,8 +13,9 @@
             <mauiGauge:GaugeView
                 GaugeType="Curved"
                 GaugeValue="{Binding DemoNumber}"
-                GaugeMinimum="10"
-                GaugeMaximum="30"/>
+                GaugeColor="{Binding GaugeColor}"
+                GaugeMinimum="0"
+                GaugeMaximum="10"/>
 
 
             <Button
