@@ -3,6 +3,7 @@
     public enum GaugeTypes
     {
         Curved,
-        Horizontal
+        Horizontal,
+        HorizontalSymmetric
     }
 }

@@ -116,6 +116,9 @@ public partial class GaugeView : ContentView
             case GaugeTypes.Horizontal:
                 _graphicsView.Drawable = new HorizontalGauge();
                 break;
+            case GaugeTypes.HorizontalSymmetric:
+                _graphicsView.Drawable = new HorizontalSymmetricGauge();
+                break;
             default:
                 throw new NotImplementedException($"No drawable is implemented for {newType}");
         }
